@@ -10,10 +10,10 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
   <meta charset="utf-8">
-  <meta name="description" content="An Image Implication Understanding Benchmark for Multimodal Large Language Models">
-  <meta name="keywords" content="II-Bench, LMM, LMM Evaluation,MLLM, MLLM Evaluation, Multimodal large language model, Vision Language Model, Large Language Model, Large Multimodal Model, artificial intelligence, AI, AGI, artificial general intelligence">
+  <meta name="description" content="Can MLLMs Understand the Deep Implication Behind Chinese Images?">
+  <meta name="keywords" content="CII-Bench, LMM, LMM Evaluation, MLLM, MLLM Evaluation, Multimodal large language model, Vision Language Model, Large Language Model, Large Multimodal Model, artificial intelligence, AI, AGI, artificial general intelligence">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> II-Bench: An Image Implication Understanding Benchmark for Multimodal Large Language Models</title>
+  <title>Can MLLMs Understand the Deep Implication Behind Chinese Images?</title>
 
   <link rel="icon" href="./images/icon.png">
 
@@ -87,10 +87,10 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title is-bold">
             <img src="images/logo.png" style="width:1em;vertical-align: middle" alt="Logo">
-            <span class="II-Bench" style="vertical-align: middle">II-Bench</span>
+            <span class="CII-Bench" style="vertical-align: middle">CII-Bench</span>
             </h1>
           <h2 class="subtitle is-3 publication-subtitle">
-            An Image Implication Understanding Benchmark for Multimodal Large Language Models
+            Can MLLMs Understand the Deep Implication Behind Chinese Images?
 
           <!-- </h2>
           <div class="is-size-5 publication-authors">
@@ -197,7 +197,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/II-Bench/II-Bench" class="external-link button is-normal is-rounded">
+                <a href="https://github.com/MING_X/CII-Bench" class="external-link button is-normal is-rounded">
                   <span class="icon">
                       <i class="fab fa-github" aria-hidden="true"></i>
                   </span>
@@ -307,15 +307,12 @@
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            The rapid advancements in the development of multimodal large language models (MLLMs) have consistently led to new breakthroughs on various benchmarks.
-            In response, numerous challenging and comprehensive benchmarks have been proposed to more accurately assess the capabilities of MLLMs.
-
-            However, there is a dearth of exploration of the higher-order perceptual capabilities of MLLMs.
-            To fill this gap, we propose the <b>I</b>mage <b>I</b>mplication understanding <b>Bench</b>mark, <b>II-Bench</b>, which aims to evaluate the model's higher-order perception of images.
-
-            Our extensive experiments on 20 MLLMs reveal significant performance gaps between models and humans, particularly in abstract domains like Art and Psychology.
-            Our findings highlight the need for improved emotional understanding in MLLMs and suggest that incorporating emotional polarity information can enhance model performance.
-            II-Bench aims to inspire advancements in multimodal AI research and foster the development of more sophisticated artificial general intelligence (AGI).
+          As the capabilities of Multimodal Large Language Models (MLLMs) continue to improve, the need for higher-order capability evaluation of MLLMs is increasing. However, there is a lack of work evaluating MLLM for higher-order perception and understanding of Chinese visual content.
+          To fill the gap, we introduce the <b>C</b>hinese  <b>I</b>mage  <b>I</b>mplication understanding  <b>Bench</b>mark,  <b>CII-Bench</b>, which aims to assess the higher-order perception and understanding capabilities of MLLMs for Chinese images. 
+          CII-Bench stands out in several ways compared to existing benchmarks. Firstly, to ensure the authenticity of the Chinese context, images in CII-Bench are sourced from the Chinese Internet and manually reviewed, with corresponding answers also manually crafted. Additionally, CII-Bench incorporates images that represent Chinese traditional culture, such as famous Chinese traditional paintings, which can deeply reflect the model's understanding of Chinese traditional culture.
+          Through extensive experiments on CII-Bench across multiple MLLMs, we have made significant findings. 
+          Initially, a substantial gap is observed between the performance of MLLMs and humans on CII-Bench. The highest accuracy of MLLMs attains 64.4%, where as human accuracy averages 78.2%, peaking at an impressive 81.0%. Subsequently, MLLMs perform worse on Chinese traditional culture images, suggesting limitations in their ability to understand high-level semantics and lack a deep knowledge base of Chinese traditional culture. Finally, it is observed that most models exhibit enhanced accuracy when image emotion hints are incorporated into the prompts.
+          We believe that CII-Bench will enable MLLMs to gain a better understanding of Chinese semantics and Chinese-specific images, advancing the journey towards expert artificial general intelligence (AGI).
 
           </p>
         </div>
@@ -1072,375 +1069,11 @@
               <img src="error/12.png" alt="grade-lv" width="60%">
             </div>
           </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/13.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/14.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/15.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/16.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/17.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/18.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/19.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/20.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/28.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/29.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/30.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/31.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/32.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/33.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/34.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/35.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/36.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/37.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/38.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/39.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/40.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/45.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/46.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/47.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/48.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/49.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/54.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/55.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/56.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/57.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/61.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/62.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/63.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/64.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/65.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/66.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/67.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/68.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/69.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/74.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/75.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/76.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="error/77.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-
+          
         </div>
       </div>
     </div>
-<!-------------------------------------------------------------------- Correct Example -------------------------------------------------------------------->
 
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Correct Examples</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/1.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/2.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/3.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/4.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/5.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/6.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/21.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/22.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/23.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/24.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/25.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/26.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/27.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/41.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/42.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/43.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/44.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/50.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/51.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/52.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/53.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/58.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/59.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/60.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/70.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/71.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/72.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="right/73.png" alt="grade-lv" width="60%">
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
 <!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
 
 
