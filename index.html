@@ -279,7 +279,7 @@
     </div> -->
       <!-- <div class="box m-5"> -->
         <div class="content has-text-centered">
-          <img src="images/composition.png" alt="composition" width="40%">
+          <img src="images/composition.png" alt="composition" width="35%" class="center">
           <p> Overview of CII-Bench: CII-Bench comprises 698 images, spanning six domains: Life, Art, Society, Politics, Environment, and Chinese Traditional Culture.</p>
         </div>
       <!-- </div> -->
@@ -343,7 +343,7 @@
             We introduce the <b>C</b>hinese <b>I</b>mage <b>I</b>mplication Understanding <b>Bench</b>mark <b>CII-Bench</b>, a new benchmark measuring the higher-order perceptual, reasoning and comprehension abilities of MLLMs when presented with complex Chinese implication images.
             These images, including abstract artworks, comics and posters, possess visual implications that require an understanding of visual details and reasoning ability.
             CII-Bench reveals whether current MLLMs, leveraging their inherent comprehension abilities, can accurately decode the metaphors embedded within the complex and abstract information presented in these images.
-            <img src="images/CII-Bench-sample.png" alt="CII-Bench-sample" class="center">
+            <img src="images/CII-Bench-sample.png" alt="CII-Bench-sample" width="90%" class="center">
           <br>
           </p><p>
             CII-Bench contains a total of 698 various Chinese images.
@@ -362,13 +362,13 @@
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="images/CII-Bench-type.png" alt="CII-Bench-type" width="80%">
+              <img src="images/CII-Bench-type.png" alt="CII-Bench-type" width="75%">
               <p> CII-Bench specific image type and domain statistics.</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="images/statistics.png" alt="statistics" width="70%">
+              <img src="images/statistics.png" alt="statistics" width="85%">
               <p> Key statistics of the CII-Bench benchmark</p>
             </div>
           </div>
@@ -918,18 +918,20 @@
     <h2 class="title is-3">Different Prompt Skills</h2>
     <div class="content has-text-justified">
       <p>
-      <b>Analysis of Chain-of-Thought (CoT)</b>. The results indicate that CoT had no significant effect on improving accuracy.
-        In some cases, particularly with smaller open-source models, the accuracy even declined when CoT was used.
-        For example, CogVLM2-Llama3-Chat-19B scores 70.3% without CoT and drops to 69.3% with CoT, InternVL-Chat-1.5 scores 66.3% and 63.3% as the same.
-        These findings align with other benchmarks, which show that CoT is not particularly effective for image understanding tasks.
+      <b>Analysis of Chain-of-Thought (CoT)</b>. The results indicate that CoT does not significantly improve the accuracy of the models. 
+        In some cases, particularly with smaller open-source models, the accuracy even declined when CoT was used. 
+        For example, MiniCPM-v2.6 scores 45.0% without CoT, but this drops to 38.9% with CoT; similarly, LLaVA-1.6-72B scores decrease from 48.0% to 45.3%.
+        Upon analyzing the models’ responses, we find that those models showing a decrease in accuracy with CoT often suffer from overinterpretation, where questions that were initially answered correctly are misinterpreted after CoT is applied. 
+        Additionally, for questions that were originally answered incorrectly, CoT does not lead to significant improvements and sometimes even causes confusion, such as selecting multiple options. 
+        However, for most models, the probability of failing to extract an answer option from the response decreases after using CoT, which explains why some models show improved accuracy with CoT.
       </p>
       <p>
-      <b>Analysis of Different Types and Domains</b>. To evaluate the impact of different label information on model accuracy, we conduct an ablation study by providing corresponding label information (Emotion, Domain, Rhetoric) for the images in the prompt.
-         This outcome is consistent with the human perspective of image metaphor comprehension.
-        Emotion labels likely provide more intuitive and salient cues that align closely with human interpretative processes, thereby facilitating better model performance.
-        In contrast, Domain and Rhetoric labels, while still beneficial, are not as immediately intuitive or universally applicable, thus resulting in slightly lower effectiveness in improving model accuracy.
-        At the same time, from the perspective of model training, the model has a normal understanding of emotion, unlike the specific nouns we define ourselves in the Rhetoric and Domain labels.
-        The model does not see many descriptions of such specific nouns during pre-training, which does not help improve accuracy.
+      <b>Analysis of Different Types and Domains</b>. To evaluate the impact of different label information on model accuracy, we conduct an ablation study by providing relevant label information(Emotion, Domain, Rhetoric) in the prompts. 
+        The results show that emotion labels significantly improve model accuracy, followed by domain and rhetoric labels, both of which exhibit similar effectiveness.
+        This result aligns with human intuition. The answer options typically include negative, positive, and neutral choices. When the model receives emotional information, it can eliminate some irrelevant options, naturally leading to higher accuracy.
+        In contrast, domain and rhetoric information generally do not effectively help the model eliminate options, resulting in more limited improvements.
+        Additionally, from a model training perspective, models tend to have a more mature understanding of emotions, while specific nouns in rhetoric and domain labels are often custom-defined. 
+        During pre-training, the model may not have encountered a large number of descriptions for such specific nouns, making these labels less helpful in improving accuracy.
       </p>
       <div class="content has-text-centered">
         <img src="images/prompt.png" width="75%">
@@ -938,12 +940,9 @@
       </div>
 
       <p>
-      <b>Analysis of Few-shot Examples.</b>. Specifically, the performance tends to drop as more examples are provided.
-        This can be attributed to the models’ inferior multi-image capabilities compared to their single-image capabilities, leading to a decline in accuracy with an increasing number of shots.
-        Additionally, as the number of shots increases, the input length becomes longer, and the model’s long text ability is insufficient, resulting in poor long context performance.
-        An example is Qwen-VL-Max, where inputs exceeding 6,000 tokens cause errors.
-        Moreover, chat models generally exhibit good instruction following ability, reducing the necessity for few-shot examples.
-      </p>
+      <b>Analysis of Few-shot Examples.</b>. The results indicate that few-shot examples do not improve the models’ accuracy. 
+      Specifically, performance declines as the number of examples increases. This decline can be attributed to the models’ inferior capabilities in handling multiple images compared to single images, leading to a decrease in accuracy with a higher number of shots.
+      Furthermore, as the number of shots increases, the input length also extends, and the models’ ability to process long texts is inadequate, resulting in suboptimal performance with long contexts.
     </div>
     <div class="content has-text-centered">
       <img src="images/fewshot.png" width="73%">
