@@ -279,7 +279,7 @@
     </div> -->
       <!-- <div class="box m-5"> -->
         <div class="content has-text-centered">
-          <img src="images/composition.png" alt="composition" width="30%">
+          <img src="images/composition.png" alt="composition" width="45%">
           <p> Overview of CII-Bench: CII-Bench comprises 698 images, spanning six domains: Life, Art, Society, Politics, Environment, and Chinese Traditional Culture.</p>
         </div>
       <!-- </div> -->
@@ -343,7 +343,7 @@
             We introduce the <b>C</b>hinese <b>I</b>mage <b>I</b>mplication Understanding <b>Bench</b>mark <b>CII-Bench</b>, a new benchmark measuring the higher-order perceptual, reasoning and comprehension abilities of MLLMs when presented with complex Chinese implication images.
             These images, including abstract artworks, comics and posters, possess visual implications that require an understanding of visual details and reasoning ability.
             CII-Bench reveals whether current MLLMs, leveraging their inherent comprehension abilities, can accurately decode the metaphors embedded within the complex and abstract information presented in these images.
-            <img src="images/CII-Bench-sample.png" alt="CII-Bench-sample" class="center">
+            <img src="images/CII-Bench-sample.png" alt="CII-Bench-sample" width="85%">
           <br>
           </p><p>
             CII-Bench contains a total of 698 various Chinese images.
@@ -752,7 +752,7 @@
               </tr>
 
 
-              <tr style="background-color: #f6d066;"></tr>
+              <tr style="background-color: #f6d066;">
                 <td style="text-align: left;">  
                       <b> Qwen2-7B-Instruct </b>
                 </td>
@@ -769,7 +769,7 @@
                 <td><b>33.6</b></td>
               </tr>  
               
-              <tr style="background-color: #f6d066;"></tr>
+              <tr style="background-color: #f6d066;">
                 <td style="text-align: left;">
                       <b> DeepSeek-67B-Chat </b>
                 </td>
@@ -786,7 +786,7 @@
                 <td><u>33.2</u></td>
               </tr>  
 
-              <tr style="background-color: #f6d066;"></tr>
+              <tr style="background-color: #f6d066;">
                 <td style="text-align: left;">
                       <b> Llama-3-8B-Instruct </b>
                 </td>
@@ -874,7 +874,7 @@
       </div>
 
       <p>
-      <b>Analysis of Few-shot Examples.</b>. The results indicate that few-shot examples do not improve the models’ accuracy. 
+      <b>Analysis of Few-shot Examples</b>. The results indicate that few-shot examples do not improve the models’ accuracy. 
       Specifically, performance declines as the number of examples increases. This decline can be attributed to the models’ inferior capabilities in handling multiple images compared to single images, leading to a decrease in accuracy with a higher number of shots.
       Furthermore, as the number of shots increases, the input length also extends, and the models’ ability to process long texts is inadequate, resulting in suboptimal performance with long contexts.
     </div>
@@ -891,12 +891,12 @@
     <h2 class="title is-3">Chinese Traditional Culture Evaluation</h2>
     <div class="content has-text-justified">
       <p>
-      <b>Why Choose to Evaluate Chinese Traditional Culture?</b>. The Chinese traditional culture category is a distinctive feature of the CII-Bench dataset, where MLLMs consistently score the lowest. 
+      <b>Why Choose to Evaluate Chinese Traditional Culture?</b> The Chinese traditional culture category is a distinctive feature of the CII-Bench dataset, where MLLMs consistently score the lowest. 
         Therefore, we need a deeper evaluation of this field to analyze the extent to which MLLM understands Chinese traditional culture.
         We choose to deeply analyze MLLM’s understanding of Chinese traditional culture by evaluating Chinese traditional paintings.
       </p>
       <p>
-        <b>Why Choose Chinese Traditional Paintings?</b>. The imagery associated with Chinese traditional culture often embodies complex implications, encompassing customs, historical anecdotes, and legendary tales, making direct evaluation particularly challenging. Chinese traditional painting, intrinsically intertwined with Chinese traditional culture, offers a viable proxy for this assessment. 
+        <b>Why Choose Chinese Traditional Paintings?</b> The imagery associated with Chinese traditional culture often embodies complex implications, encompassing customs, historical anecdotes, and legendary tales, making direct evaluation particularly challenging. Chinese traditional painting, intrinsically intertwined with Chinese traditional culture, offers a viable proxy for this assessment. 
         The unique value of Chinese traditional painting lies in its embodiment of Chinese cultural connotations, aesthetic implications, and distinctive artistic expression.
         The core philosophical concepts of Confucianism, Taoism, and Buddhism, along with their humanistic essence, have consistently permeated the entire trajectory of Chinese painting history.
         Consequently, we choose to evaluate MLLMs’ comprehension of Chinese traditional culture through an in-depth analysis of their understanding of Chinese traditional paintings.
@@ -987,12 +987,9 @@
         </div>
       </div>
     </div>
-
-<!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
-
-
   </div>
 </section>
+<!-------------------------------------------------------------------- END SECTION -------------------------------------------------------------------->
 
 
 <!-- @PAN TODO: bibtex -->
@@ -1017,7 +1014,7 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is website adapted from <a href="https://mmmu-benchmark.github.io/&quot;">MMMU</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            This website is website adapted from <a href="https://mmmu-benchmark.github.io/;">MMMU</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
         </div>
@@ -1079,13 +1076,6 @@ function sortTable(table, column, type, asc) {
     rows.forEach(row => tbody.appendChild(row));
 }
 
-  // 切换表格的函数
-  // function toggleTables () {
-  //     var table1 = document.getElementById('table1');
-  //     var table2 = document.getElementById('table2');
-  //     table1.classList.toggle('hidden');
-  //     table2.classList.toggle('hidden');
-  // }
 
   document.getElementById('toggleButton').addEventListener('click', toggleTables);
   const canvas = document.getElementById('difficulty_level_chart');
