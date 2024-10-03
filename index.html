@@ -307,18 +307,31 @@
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-          As the capabilities of Multimodal Large Language Models (MLLMs) continue to improve, the need for higher-order capability evaluation of MLLMs is increasing. However, there is a lack of work evaluating MLLM for higher-order perception and understanding of Chinese visual content.
-          To fill the gap, we introduce the <b>C</b>hinese  <b>I</b>mage  <b>I</b>mplication understanding  <b>Bench</b>mark,  <b>CII-Bench</b>, which aims to assess the higher-order perception and understanding capabilities of MLLMs for Chinese images. 
-          CII-Bench stands out in several ways compared to existing benchmarks. Firstly, to ensure the authenticity of the Chinese context, images in CII-Bench are sourced from the Chinese Internet and manually reviewed, with corresponding answers also manually crafted. Additionally, CII-Bench incorporates images that represent Chinese traditional culture, such as famous Chinese traditional paintings, which can deeply reflect the model's understanding of Chinese traditional culture.
-          Through extensive experiments on CII-Bench across multiple MLLMs, we have made significant findings. 
-          Initially, a substantial gap is observed between the performance of MLLMs and humans on CII-Bench. The highest accuracy of MLLMs attains 64.4%, where as human accuracy averages 78.2%, peaking at an impressive 81.0%. Subsequently, MLLMs perform worse on Chinese traditional culture images, suggesting limitations in their ability to understand high-level semantics and lack a deep knowledge base of Chinese traditional culture. Finally, it is observed that most models exhibit enhanced accuracy when image emotion hints are incorporated into the prompts.
-          We believe that CII-Bench will enable MLLMs to gain a better understanding of Chinese semantics and Chinese-specific images, advancing the journey towards expert artificial general intelligence (AGI).
-
+            As the capabilities of Multimodal Large Language Models (MLLMs) continue to improve, the need for higher-order capability evaluation of MLLMs is increasing. However, there is a lack of work evaluating MLLM for higher-order perception and understanding of Chinese visual content.
+            To fill the gap, we introduce the <b>C</b>hinese  <b>I</b>mage  <b>I</b>mplication understanding  <b>Bench</b>mark,  <b>CII-Bench</b>, which aims to assess the higher-order perception and understanding capabilities of MLLMs for Chinese images. 
+            CII-Bench stands out in several ways compared to existing benchmarks. Firstly, to ensure the authenticity of the Chinese context, images in CII-Bench are sourced from the Chinese Internet and manually reviewed, with corresponding answers also manually crafted. Additionally, CII-Bench incorporates images that represent Chinese traditional culture, such as famous Chinese traditional paintings, which can deeply reflect the model's understanding of Chinese traditional culture.
+            Through extensive experiments on CII-Bench across multiple MLLMs, we have made significant findings. 
+            Initially, a substantial gap is observed between the performance of MLLMs and humans on CII-Bench. The highest accuracy of MLLMs attains 64.4%, where as human accuracy averages 78.2%, peaking at an impressive 81.0%. Subsequently, MLLMs perform worse on Chinese traditional culture images, suggesting limitations in their ability to understand high-level semantics and lack a deep knowledge base of Chinese traditional culture. Finally, it is observed that most models exhibit enhanced accuracy when image emotion hints are incorporated into the prompts.
+            We believe that CII-Bench will enable MLLMs to gain a better understanding of Chinese semantics and Chinese-specific images, advancing the journey towards expert artificial general intelligence (AGI).
           </p>
         </div>
+        <h2 class="title is-3"> Key Insights </h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li>We introduce CII-Bench, the first benchmark designed to assess the understanding of meanings in Chinese images, which poses a significant challenge to current MLLMs.</li>
+            <li>We design a comprehensive evaluation metric based on GPT-4o to evaluate Chinese traditional culture. This metric aligns more closely with human annotations and is better suited for evaluating Chinese traditional painting.</li>
+            <li>Our experimental findings are as follows: 
+              <ol>
+                <li>There is a notable performance gap between MLLMs and humans. Models demonstrate the highest accuracy of 64.4%, while human accuracy average at 78.2% and best at 81.0%.</li>
+                <li>Closed-source models generally outperform open-source models, but the best-performing open-source model surpasses the top closed source model, with a difference of more than 3%.</li>
+                <li>Models perform significantly worse in Chinese traditional culture compared to other domains, indicating that current models still lack sufficient understanding of Chinese culture. Further analysis shows that GPT-4o can only observe the surface-level information, it’s difficult to deeply interpret the complex cultural elements contained in Chinese traditional painting.</li>
+                <li>Incorporating image emotion hints into prompts generally improves model scores, indicating that models struggle with emotional understanding, leading to misinterpretation of the implicit meanings in the images.</li>
+              </ol>
+            </li>
+          </ul>
+        </div> 
       </div>
     </div>
-    <!--/ Abstract. -->
 </div>
 </section>
 
@@ -989,6 +1002,35 @@
     </div>
   </div>
 </section>
+
+<!-------------------------------------------------------------------- Interpretability Analysis SECTION -------------------------------------------------------------------->
+<div class="columns is-centered m-6">
+  <div class="column is-full has-text-centered content">
+    <h2 class="title is-3"> Interpretability Analysis of Chinese Image Implications</h2>
+    <div class="content has-text-justified">
+      <p>
+        The essence of Chinese image implications is deeply rooted in deep cultural heritage and complex contextual associations, which enables them to convey profound messages through nuanced expressions. 
+        For example, in traditional Chinese art forms such as landscape and New Year paintings, the imagery transcends mere depiction of nature or daily occurrences. 
+        Instead, it embodies emotions, philosophical insights, and societal norms through metaphorical and highly symbolic expressions.
+        These symbols, like the pine tree, plum blossom, and crane, are not superficial meaning but are steeped in centuries of cultural tradition, representing resilience, purity, and longevity.
+
+        However, deciphering these complex messages can be challenging, particularly for those unfamiliar with the cultural and historical narratives tied to these symbols. 
+        This contrasts with English image implications, which often convey messages through more straightforward and explicit symbolism.
+        As a result, the interpretability of Chinese image implications depends to some extent on reconstructing and resonating with the cultural context, which is what makes them unique: their meaning is not only visual but also culturally resonant, bridging across time and space.
+
+        Moreover, the interpretability of Chinese image implications has new changed in the modern era.
+        Globalization and the surge of internet culture have intertwined foreign elements with traditional Chinese culture, birthing new symbols and implications. 
+        This intersection introduces additional layers of meaning, complicating the interpretation of traditional symbols.
+      </p>
+    </div>
+    <div class="content has-text-centered">
+      <img src="images/Comparision of image.png" alt="Comparision of image" width="50%">
+      <p>Comparision of Chinese and English image implications. 
+        Chinese images often embody richer scenes and deeper implications with Chinese traditional culture compared with the straightforward and explicit symbolism in English images.</p>
+    </div>
+  </div>
+</div>
+
 <!-------------------------------------------------------------------- END SECTION -------------------------------------------------------------------->
 
 
