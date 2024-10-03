@@ -401,7 +401,7 @@
 
 
 
------------------------------------------------------------------- RESULTS SECTION ------------------------------------------------------------------
+<!-- ------------------------------------------------------------------ RESULTS SECTION ------------------------------------------------------------------ -->
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
@@ -423,13 +423,13 @@
 
             <span class="leaderboard-label" style="background-color: #def9cb;">Closed-Source</span>
             <span class="leaderboard-label" style="background-color: #e4efdc;">Open-Source</span>
-            <span class="leaderboard-label" style="background-color: #f9f2f8;">Text-Only</span>
+            <span class="leaderboard-label" style="background-color: #f6d066;">Text-Only</span>
             <span class="leaderboard-label" style="background-color: #e0ebf3;">Human</span>
 
           </div>
           <table id="table1" class="js-sort-table">
             <tbody><tr>
-              <td class="js-sort-number"><strong>Reset</strong></td>
+              <td class="js-sort-number"><strong>Model</strong></td>
               <td class="js-sort-number"><strong>Overall</strong></td>
               <td class="js-sort-number"><strong>Life</strong></td>
               <td class="js-sort-number"><strong>Art</strong></td>
@@ -518,7 +518,7 @@
                 </td>
                 <td>54.1</td>
                 <td>54.1</td>
-                
+
                 <td>55.8</td>
                 <td>52.1</td>
                 <td>50.0</td>
@@ -532,278 +532,227 @@
 
               <tr style="background-color: #e4efdc;">
                 <td style="text-align: left;">
-                    <b> LLaVA-1.6-34B </b>
+                    <b> Qwen2-VL-72B </b>
                 </td>
-                <td> <b>73.8</b> </td>
-                <td> <b>73.8</b> </td>
+                <td><b>64.4</b></td>
+                <td><b>61.7</b></td>
 
-                <td style="text-decoration: underline;"> 71.8 </td>
-                <td> <b>73.3</b> </td>
-                <td> <b>71.1</b> </td>
-                <td style="text-decoration: underline;"> 78.4 </td>
-                <td style="text-decoration: underline;"> 81.5 </td>
-                <td> <b>79.1</b> </td>
-                <td> <b>72.9</b> </td>
-                <td> <b>72.9</b> </td>
+                <td><b>61.2</b></td>
+                <td><b>68.0</b></td>
+                <td><b>79.2</b></td>
+                <td><b>75.9</b></td>
+                <td><b>59.9</b></td>
+                <td><b>62.7</b></td>
+                <td><b>63.8</b></td>
+                <td><b>66.4</b></td>
               </tr>
 
               <tr style="background-color: #e4efdc;">
                 <td style="text-align: left;">
-                        <b> CogVLM2-Llama3-Chat </b>
+                        <b> InternVL2-40B </b>
                 </td>
-              <td style="text-decoration: underline;"> 70.3 </td>
-                <td style="text-decoration: underline;"> 68.9 </td>
+                <td><u>57.9</u></td>
+                <td><u>55.8</u></td>
 
-              <td> 68.2 </td>
-              <td style="text-decoration: underline;"> 70.9 </td>
-              <td style="text-decoration: underline;"> 67.8 </td>
-              <td> 72.5 </td>
-              <td> <b>86.2</b> </td>
-              <td> 69.9 </td>
-                <td style="text-decoration: underline;"> 71.1 </td>
-                <td style="text-decoration: underline;"> 69.1 </td>
-              </tr>
-
-              <tr style="background-color: #e4efdc;">
-                <td style="text-align: left;">
-                      <b> MiniCPM-Llama3-2.5 </b>
-                </td>
-                <td>69.4</td>
-                <td>68.4</td>
-
-                <td style="text-decoration: underline;"> 71.8 </td>
-                <td>69.4</td>
-                <td>64.5</td>
-                <td><b>80.4</b></td>
-                <td>78.5</td>
-                <td style="text-decoration: underline;"> 75.0 </td>
-                <td>69.3</td>
-                <td>66.9</td>
-              </tr>
-
-              <tr style="background-color: #e4efdc;">
-                <td style="text-align: left;">
-                      <b>Yi-VL-34B-Chat</b>
-                </td>
-                <td>67.9</td>
-                <td>67.5</td>
-
-                <td>70.6</td>
-                <td>67.7</td>
-                <td>63.8</td>
-                <td>70.6</td>
-                <td>76.9</td>
-                <td>74.0</td>
-                <td>68.2</td>
-                <td>64.5</td>
-              </tr>
-
-              <tr style="background-color: #e4efdc;">
-                <td style="text-align: left;">
-                      <b>Idefics2-8B</b>
-                </td>
-                <td>67.7</td>
-                <td>67.2</td>
-
-                <td><b>74.1</b></td>
-                <td>67.7</td>
+                <td><u>55.1</u></td>
+                <td><u>61.9</u></td>
                 <td>62.5</td>
-                <td>74.5</td>
-                <td>70.8</td>
-                <td>68.9</td>
-                <td>67.0</td>
-                <td>68.4</td>
+                <td><u>70.7</u></td>
+                <td><u>52.6</u></td>
+                <td>54.4</td>
+                <td><u>58.0</u></td>
+                <td><u>60.8</u></td>
               </tr>
 
               <tr style="background-color: #e4efdc;">
                 <td style="text-align: left;">
-                      <b>InternVL-Chat-1.5</b>
+                      <b> InternVL2-8B </b>
                 </td>
-                <td>66.3</td>
-                <td>63.6</td>
-
-                <td>65.9</td>
-                <td>68.5</td>
-                <td>65.8</td>
-                <td>64.7</td>
-                <td>76.9</td>
-                <td>73.5</td>
-                <td>65.4</td>
-                <td>64.5</td>
-              </tr>
-
-              <tr style="background-color: #e4efdc;">
-                <td style="text-align: left;">
-                      <b>InternLM-XComposer2-VL</b>
-                </td>
-                <td>62.1</td>
-                <td>61.7</td>
-
-                <td>62.4</td>
-                <td>62.3</td>
-                <td>58.6</td>
-                <td>70.6</td>
-                <td>66.2</td>
-                <td>65.8</td>
-                <td>63.0</td>
-                <td>58.7</td>
-              </tr>
-
-              <tr style="background-color: #e4efdc;">
-                <td style="text-align: left;">
-                      <b>Yi-VL-6B-Chat</b>
-                </td>
-                <td>61.3</td>
-                <td>60.9</td>
-
-                <td>63.5</td>
-                <td>60.7</td>
-                <td>56.6</td>
-                <td>66.7</td>
-                <td>72.3</td>
-                <td>61.7</td>
-                <td>61.7</td>
-                <td>61.1</td>
-              </tr>
-
-              <tr style="background-color: #e4efdc;">
-                <td style="text-align: left;">
-                      <b>DeepSeek-VL-Chat-7B</b>
-                </td>
-                <td>60.3</td>
-                <td>59.0</td>
-
-                <td>58.8</td>
-                <td>58.4</td>
-                <td>61.8</td>
-                <td>68.6</td>
-                <td>76.9</td>
-                <td>65.8</td>
-                <td>60.1</td>
-                <td>58.0</td>
-              </tr>
-
-              <tr style="background-color: #e4efdc;">
-                <td style="text-align: left;">
-                      <b>BLIP-2 FLAN-T5-XXL</b>
-                </td>
-                <td>57.8</td>
-                <td>57.1</td>
-
-                <td>63.5</td>
-                <td>57.0</td>
+                <td>53.1</td>
+                <td>49.2</td>
+                
+                <td>53.1</td>
+                <td>55.7</td>
+                <td>62.5</td>
+                <td>63.8</td>
+                <td>50.4</td>
+                <td>50.6</td>
                 <td>53.3</td>
-                <td>66.7</td>
-                <td>66.2</td>
-                <td>67.9</td>
-                <td>57.2</td>
-                <td>54.3</td>
+                <td>55.1</td> 
               </tr>
 
               <tr style="background-color: #e4efdc;">
                 <td style="text-align: left;">
-                      <b>Mantis-8B-siglip-Llama3</b>
+                      <b>InternVL2-Llama3-76B</b>
                 </td>
-                <td>57.5</td>
-                <td>56.8</td>
+                <td>52.9</td>
+                <td>50.8</td>
 
-                <td>61.2</td>
-                <td>57.5</td>
-                <td>53.9</td>
-                <td>64.7</td>
-                <td>61.5</td>
-                <td>59.2</td>
-                <td>58.0</td>
-                <td>55.6</td>
+                <td>53.7</td>
+                <td>51.0</td>
+                <td>58.3</td>
+                <td>67.2</td>
+                <td>51.1</td>
+                <td><u>54.8</u></td>
+                <td>51.8</td>
+                <td>52.3</td>
               </tr>
 
               <tr style="background-color: #e4efdc;">
                 <td style="text-align: left;">
-                      <b>InstructBLIP-T5-XXL</b>
+                      <b>GLM-4V-9b</b>
                 </td>
-                <td>56.7</td>
-                <td>56.2</td>
+                <td>50.3</td>
+                <td>46.7</td>
 
-                <td>58.8</td>
-                <td>58.6</td>
-                <td>45.4</td>
-                <td>64.7</td>
-                <td>64.6</td>
-                <td>63.3</td>
-                <td>56.1</td>
-                <td>54.6</td>
+                <td>48.3</td>
+                <td>53.6</td>
+                <td>54.2</td>
+                <td>62.1</td>
+                <td>48.2</td>
+                <td>51.9</td>
+                <td>52.9</td>
+                <td>46.3</td>
+              </tr>
+
+              <tr style="background-color: #e4efdc;">
+                <td style="text-align: left;">
+                      <b>Qwen2-VL-7B</b>
+                </td>
+                <td>49.6</td>
+                <td>42.5</td>
+
+                <td>51.7</td>
+                <td>54.1</td>
+                <td>62.5</td>
+                <td>65.5</td>
+                <td>44.5</td>
+                <td>50.2</td>
+                <td>47.5</td>
+                <td>51.2</td>
+              </tr>
+
+              <tr style="background-color: #e4efdc;">
+                <td style="text-align: left;">
+                      <b>LLaVA-1.6-72B</b>
+                </td>
+                <td>48.0</td>
+                <td>43.8</td>
+
+                <td>48.3</td>
+                <td>49.5</td>
+                <td><u>70.8</u></td>
+                <td>60.3</td>
+                <td>43.8</td>
+                <td>41.5</td>
+                <td>52.5</td>
+                <td>49.2</td>
+              </tr>
+
+              <tr style="background-color: #e4efdc;">
+                <td style="text-align: left;">
+                      <b>LLaVA-1.6-34B</b>
+                </td>
+                <td>46.0</td>
+                <td>40.8</td>
+
+                <td><u>55.1</u></td>
+                <td>42.8</td>
+                <td>45.8</td>
+                <td>62.1</td>
+                <td>43.1</td>
+                <td>44.4</td>
+                <td>48.2</td>
+                <td>45.2</td>
+              </tr>
+
+              <tr style="background-color: #e4efdc;">
+                <td style="text-align: left;">
+                      <b>MiniCPM-v2.6</b>
+                </td>
+                <td>45.0</td>
+                <td>37.5</td>
+
+                <td>47.6</td>
+                <td>49.5</td>
+                <td>58.3</td>
+                <td>55.2</td>
+                <td>42.3</td>
+                <td>45.6</td>
+                <td>44.6</td>
+                <td>44.9</td>
+              </tr>
+
+              <tr style="background-color: #e4efdc;">
+                <td style="text-align: left;">
+                      <b>CogVLM2-Llama3-Chinese-Chat</b>
+                </td>
+                <td>43.4</td>
+                <td>37.1</td>
+
+                <td>48.3</td>
+                <td>42.3</td>
+                <td>54.2</td>
+                <td>63.8</td>
+                <td>40.2</td>
+                <td>40.3</td>
+                <td>45.7</td>
+                <td>43.8</td>
+              </tr>
+
+              <tr style="background-color: #e4efdc;">
+                <td style="text-align: left;">
+                      <b>MiniCPM-Llama3-2.5</b>
+                </td>
+                <td>40.4</td>
+                <td>36.3</td>
+
+                <td>45.6</td>
+                <td>37.1</td>
+                <td>50.0</td>
+                <td>51.7</td>
+                <td>40.2</td>
+                <td>43.2</td>
+                <td>37.0</td>
+                <td>41.3</td>
+              </tr>
+
+              <tr style="background-color: #e4efdc;">
+                <td style="text-align: left;">
+                      <b>idefics2-8b</b>
+                </td>
+                <td>36.3</td>
+                <td>25.0</td>
+
+                <td>46.3</td>
+                <td>38.1</td>
+                <td>41.7</td>
+                <td>56.9</td>
+                <td>32.9</td>
+                <td>32.8</td>
+                <td>39.1</td>
+                <td>36.4</td>
               </tr>
 
               <tr style="background-color: #e4efdc;">
                 <td style="text-align: left;">
                       <b>Qwen-VL-Chat</b>
                 </td>
-                <td>53.4</td>
-                <td>53.2</td>
+                <td>34.3</td>
+                <td>27.9</td>
 
-                <td>49.4</td>
-                <td>52.1</td>
-                <td>50.0</td>
-                <td>60.8</td>
-                <td>72.3</td>
-                <td>56.1</td>
-                <td>52.6</td>
-                <td>53.6</td>
-              </tr>
-
-              <tr style="background-color: #e4efdc;">
-                <td style="text-align: left;">
-                      <b>mPLUGw-OWL2</b>
-                </td>
-                <td>53.2</td>
-                <td>54.0</td>
-
-                <td>56.5</td>
-                <td>50.5</td>
-                <td>52.0</td>
-                <td>60.8</td>
-                <td>56.9</td>
-                <td>55.6</td>
-                <td>52.6</td>
-                <td>53.1</td>
-              </tr>
-
-              <tr style="background-color: #e4efdc;">
-                <td style="text-align: left;">
-                      <b>BLIP-2 FLAN-T5-XL</b>
-                </td>
-                <td>52.8</td>
-                <td>53.0</td>
-
-                <td>58.8</td>
-                <td>52.5</td>
-                <td>42.8</td>
-                <td>64.7</td>
-                <td>58.5</td>
-                <td>56.1</td>
-                <td>52.9</td>
-                <td>51.0</td>
-              </tr>
-
-              <tr style="background-color: #e4efdc;">
-                <td style="text-align: left;">
-                      <b>InstructBLIP-T5-XL</b>
-                </td>
-                <td>47.3</td>
-                <td>45.6</td>
-
-                <td>48.2</td>
-                <td>48.8</td>
-                <td>44.7</td>
-                <td>52.9</td>
-                <td>50.8</td>
-                <td>46.9</td>
-                <td>48.3</td>
-                <td>45.4</td>
+                <td>34.7</td>
+                <td>32.5</td>
+                <td>45.8</td>
+                <td>55.2</td>
+                <td>36.5</td>
+                <td>34.0</td>
+                <td>35.1</td>
+                <td>33.6</td>
               </tr>
 
 
-              <tr style="background-color: #f9f2f8;"></tr>
+              <tr style="background-color: #f6d066;"></tr>
                 <td style="text-align: left;">  
                       <b> Qwen2-7B-Instruct </b>
                 </td>
@@ -820,7 +769,7 @@
                 <td><b>33.6</b></td>
               </tr>  
               
-              <tr style="background-color: #f9f2f8;"></tr>
+              <tr style="background-color: #f6d066;"></tr>
                 <td style="text-align: left;">
                       <b> DeepSeek-67B-Chat </b>
                 </td>
@@ -837,7 +786,7 @@
                 <td><u>33.2</u></td>
               </tr>  
 
-              <tr style="background-color: #f9f2f8;"></tr>
+              <tr style="background-color: #f6d066;"></tr>
                 <td style="text-align: left;">
                       <b> Llama-3-8B-Instruct </b>
                 </td>
@@ -936,24 +885,50 @@
 
   </div>
 </div>
-<!-------------------------------------------------------------------- Difficulty Levels SECTION -------------------------------------------------------------------->
-<!--<div class="columns is-centered m-6">-->
-<!--  <div class="column is-full has-text-centered content">-->
-<!--    <h2 class="title is-3">Different Difficulty Levels</h2>-->
-<!--    <div class="content has-text-justified">-->
-<!--      <p>-->
-<!--        We conduct result decomposition across question difficulties, as shown in table below.-->
-<!--        Notably, there is a larger gap between the best open-source LMM, i.e. Yi-VL-34B, and GPT-4V when facing the medium and hard questions.-->
-<!--        It is another strong evidence of the observation that the key disparity between Open-source LMMs and GPT-4V is the capacity to calculate and reason given complex conditions.-->
-<!--      </p>-->
-<!--    </div>-->
-<!--    <div class="content has-text-centered">-->
-<!--      <img src="c_static/images/table5.jpg" width="75%">-->
-<!--      <p> Result decomposition across question difficulty levels. <b>bold results</b> in LMMs indicate the best results for all models, and the <b>blue results</b> indicate the best results among the open-source models.</p>-->
-<!--    </div>   -->
+<!-------------------------------------------------------------------- CTC Evaluation SECTION -------------------------------------------------------------------->
+<div class="columns is-centered m-6">
+  <div class="column is-full has-text-centered content">
+    <h2 class="title is-3">Chinese Traditional Culture Evaluation</h2>
+    <div class="content has-text-justified">
+      <p>
+      <b>Why Choose to Evaluate Chinese Traditional Culture?</b>. The Chinese traditional culture category is a distinctive feature of the CII-Bench dataset, where MLLMs consistently score the lowest. 
+        Therefore, we need a deeper evaluation of this field to analyze the extent to which MLLM understands Chinese traditional culture.
+        We choose to deeply analyze MLLM’s understanding of Chinese traditional culture by evaluating Chinese traditional paintings.
+      </p>
+      <p>
+        <b>Why Choose Chinese Traditional Paintings?</b>. The imagery associated with Chinese traditional culture often embodies complex implications, encompassing customs, historical anecdotes, and legendary tales, making direct evaluation particularly challenging. Chinese traditional painting, intrinsically intertwined with Chinese traditional culture, offers a viable proxy for this assessment. 
+        The unique value of Chinese traditional painting lies in its embodiment of Chinese cultural connotations, aesthetic implications, and distinctive artistic expression.
+        The core philosophical concepts of Confucianism, Taoism, and Buddhism, along with their humanistic essence, have consistently permeated the entire trajectory of Chinese painting history.
+        Consequently, we choose to evaluate MLLMs’ comprehension of Chinese traditional culture through an in-depth analysis of their understanding of Chinese traditional paintings.
+        </p>
+      <p>
+      <b>Evaluation Metric</b>. Chinese traditional painting, a cornerstone of Chinese traditional culture, encompasses a rich tapestry of styles and techniques developed over millennia. 
+        These paintings are typically categorized based on their subject matter (e.g., landscape paintings, flower-and-bird paintings, figure paintings, and New Year paintings) or their stylistic and skill (e.g., court paintings, meticulous brush paintings, freehand brush paintings, and color-and-ink paintings). 
+        Each category embodies unique characteristics that reflect China’s artistic evolution and philosophical underpinnings.
+        To comprehensively assess MLLMs’ understanding of Chinese traditional paintings, we develop a multifaceted evaluation metric. This metric is designed to probe both the surface-level information readily apparent in the artwork and the deeper culture and history that informs its creation and interpretation. 
+        Our evaluation metric encompasses five key perspectives: <u>Surface-level Information</u>, <u>Aesthetic Characteristics</u>, <u>Brush and Ink Skills</u>, <u>Culture and History</u>, and <u>Deep Implications</u>.
+      </p>
+      <div class="content has-text-centered">
+        <img src="images/evaluation_metric_and_standard.png" width="73%">
+      <p>Evaluation metric and evaluation standard of Chinese traditional painting.</p>
+      </div>
+      <p>
+      <b>LLM-Based Chinese Traditional Painting Automatic Evaluation</b>. Our experiment utilize the CTC domain data from CII-Bench, comprising 130 Chinese traditional paintings.
+      We employ human-written descriptions and implication interpretations as ground truth. 
+      We choose GPT-4o to generate descriptions for these images, which are subsequently scored using GPT-4o and our evaluation standard.
+      To validate the model’s scoring efficacy, we enlist three PhD students well-versed in Chinese metaphorical imagery to independently score the 130 paintings.
+      The model-human scoring consistency reached 98%, affirming the method’s validity for assessing Chinese traditional painting comprehension. 
+      Analysis of these results, in conjunction with our evaluation standard, reveals insights across three dimensions: overall performance, difficulty levels, and emotions. 
+      The overall score of 2.71 indicates that while MLLM is able to observe the surface-level information of paintings, it has a large gap with humans in deeply interpreting the complex cultural elements contained in Chinese traditional art. 
+      In terms of difficulty evaluation, the model is consistent with human cognition, while in terms of emotion, the model has a higher negative score, indicating that the model can identify negative implications in paintings, such as using the past to satirize the present, and not appreciating talents.
+    </div>
+    <div class="content has-text-centered">
+      <img src="images/CTC_Evaluation.png" width="75%">
+      <p>Overall result of Chinese traditional painting.</p>
+    </div>
 
-<!--  </div>-->
-<!--</div>-->
+  </div>
+</div>
 <!-------------------------------------------------------------------- Error Analysis SECTION -------------------------------------------------------------------->
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
@@ -969,21 +944,6 @@
           <img src="images/error.png" alt="error distribution" width="50%">
           <p>GPT-4o error response distribution.</p>
         </div>
-
-        <!-- <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error_distribution_1.Jpeg" alt="algebraic reasoning" width="45%"/>
-              <p> Error distribution over 150 annotated GPT-4V errors.</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error_case_main_text_1_1.Jpeg" alt="arithmetic reasoning" width="45%"/>
-              <p> A basic perceptual error, easy for humans but challenging for GPT-4V.</p>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
 
@@ -995,32 +955,32 @@
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="error/case_study1.png" alt="grade-lv" width="60%">
+              <img src="error/case_study1.png" alt="grade-lv" width="73%">
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="error/case_study2.png" alt="grade-lv" width="60%">
+              <img src="error/case_study2.png" alt="grade-lv" width="73%">
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="error/case_study3.png" alt="grade-lv" width="60%">
+              <img src="error/case_study3.png" alt="grade-lv" width="73%">
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="error/case_study4.png" alt="grade-lv" width="60%">
+              <img src="error/case_study4.png" alt="grade-lv" width="73%">
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="error/case_study5.png" alt="grade-lv" width="60%">
+              <img src="error/case_study5.png" alt="grade-lv" width="73%">
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="error/case_study6.png" alt="grade-lv" width="60%">
+              <img src="error/case_study6.png" alt="grade-lv" width="73%">
             </div>
           </div>
           
