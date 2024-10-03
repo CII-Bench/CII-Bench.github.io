@@ -279,8 +279,8 @@
     </div> -->
       <!-- <div class="box m-5"> -->
         <div class="content has-text-centered">
-          <img src="images/composition.jpg" alt="composition" width="40%">
-          <p> Overview of CII-Bench: II-Bench comprises 698 images, spanning six domains: Life, Art, Society, Politics, Environment, and Chinese Traditional Culture.</p>
+          <img src="images/composition.png" alt="composition" width="40%">
+          <p> Overview of CII-Bench: CII-Bench comprises 698 images, spanning six domains: Life, Art, Society, Politics, Environment, and Chinese Traditional Culture.</p>
         </div>
       <!-- </div> -->
     </div>
@@ -332,14 +332,6 @@
   </div>
 </section>
 
-<!-- <section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Introduction</h2>
-        <div class="content has-text-justified">
-          <p> -->
-
 <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
@@ -348,44 +340,21 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce the <b>I</b>mage <b>I</b>mplication Understanding <b>Bench</b>mark <b>II-Bench</b>, a new benchmark measuring the higher-order perceptual, reasoning and comprehension abilities of MLLMs when presented with complex implication images.
+            We introduce the <b>C</b>hinese <b>I</b>mage <b>I</b>mplication Understanding <b>Bench</b>mark <b>CII-Bench</b>, a new benchmark measuring the higher-order perceptual, reasoning and comprehension abilities of MLLMs when presented with complex Chinese implication images.
             These images, including abstract artworks, comics and posters, possess visual implications that require an understanding of visual details and reasoning ability.
-            II-Bench reveals whether current MLLMs, leveraging their inherent comprehension abilities, can accurately decode the metaphors embedded within the complex and abstract information presented in these images.
-            <img src="images/CII-Bench-sample.jpg" alt="CII-Bench-sample" class="center">
+            CII-Bench reveals whether current MLLMs, leveraging their inherent comprehension abilities, can accurately decode the metaphors embedded within the complex and abstract information presented in these images.
+            <img src="images/CII-Bench-sample.png" alt="CII-Bench-sample" class="center">
           <br>
           </p><p>
-            II-Bench contains a total of 1,222 various images.
-            These images are manually collected and annotated by 50 undergraduate students from various disciplines and institutions, with sources from multiple renowned illustration websites.
+            CII-Bench contains a total of 698 various Chinese images.
+            These images are manually collected and annotated by 30 undergraduate students from various disciplines and institutions, with sources from multiple renowned Chinese illustration websites.
             Each image is manually designed with one to three multiple-choice questions, each with six options and only one correct answer.
             The questions cover the metaphors, symbolism, and detailed understanding of the images.
-            The benchmark includes a total of 1,434 multiple-choice questions, with 1,399 questions used to construct the test set and 35 questions used to construct the development and validation set for few-shot tasks.
+            The benchmark includes a total of 800 multiple-choice questions, with 765 questions used to construct the test set and 35 questions used to construct the development and validation set for few-shot tasks.
 
         </p></div>
     </div>
     </div>
-
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      &lt;!&ndash; <div class="column is-full-width has-text-centered"> &ndash;&gt;-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Comparisons with Existing Benchmarks</h2>-->
-<!--        <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            To further distinguish the difference between <i>dataset</i> and other existing ones, we elaborate the benchmark details in Figure. -->
-<!--            From the <i>breadth</i> perspective, the prior benchmarks are heavily focused on daily knowledge and common sense. -->
-<!--            The covered image format is also limited. Our benchmark aims to cover college-level knowledge with 30 image formats including diagrams, -->
-<!--            tables, charts, chemical structures, photos, paintings, geometric shapes, music sheets, medical images, etc. -->
-<!--            In the <i>depth</i> aspect, the previous benchmarks normally require commonsense knowledge or simple physical or temporal reasoning. -->
-<!--            In contrast, our benchmark requires deliberate reasoning with college-level subject knowledge.-->
-<!--        </p>-->
-<!--        <div class="content has-text-centered">-->
-<!--          <img src="c_static/images/table1.jpg" alt="algebraic reasoning" class="center">-->
-<!--          <p> Sampled II-Bench examples from each discipline. The questions and images need expert-level knowledge to understand and reason.</p>-->
-<!--        </div>-->
-
-
-<!--        </div>-->
-<!--    </div>-->
-<!--    </div>-->
 
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
@@ -399,7 +368,7 @@
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="images/statistics.png" alt="arithmetic reasoning" width="70%">
+              <img src="images/statistics.png" alt="statistics" width="70%">
               <p> Key statistics of the CII-Bench benchmark</p>
             </div>
           </div>
@@ -439,14 +408,14 @@
         <div class="content">
           <div class="content has-text-justified">
             <p>
-              We conduct experiments on II-Bench using both open-source and closed-source MLLMs. For
-              each model, we employ eight different settings: 1-shot, 2-shot, 3-shot, zero-shot (None), CoT,
-              Domain, Emotion and Rhetoric. "Emotion" denotes prompts where the model is informed about the
-              emotional polarity of the images(e.g., positive, negative), "Domain" involves adding information
-              about the image’s domain (e.g., life, environment) to the prompt, and "Rhetoric" signifies prompt
-              with information about the rhetorical devices used in the image (e.g., metaphor, personification),
-              while "None" indicates the use of standard prompts without any additional information. Uniform
-              prompts are applied across all MLLMs.
+              We conduct systematic experiments on both open-source and closed-source MLLMs using CII-Bench. For each model, we employ eight different configurations: None (zero-shot), 1-shot, 2-shot,
+              3-shot, CoT, Domain, Emotion, and Rhetoric. “None” represents the use of a standard prompt
+              without any additional information. “Emotion” indicates the inclusion of information related to the
+              emotional polarity of the image (e.g., positive, negative) in the prompt, “Domain” involves adding
+              information about the image’s domain (e.g., life, art), and “Rhetoric” refers to including details
+              about the rhetorical devices used in the image (e.g., metaphor, contrast) in the prompt. Additionally,
+              to verify the necessity of images in problem-solving, we select a portion of LLMs to complete tasks
+              without image input.
             </p>
           </div>
 
@@ -454,9 +423,10 @@
 <!--            <span class="leaderboard-label" style="background-color: #f8fffe;">Open-Source</span>-->
 <!--            <span class="leaderboard-label" style="background-color: #f9f2f8;">Closed</span>-->
 
+            <span class="leaderboard-label" style="background-color: #def9cb;">Closed-Source</span>
             <span class="leaderboard-label" style="background-color: #e4efdc;">Open-Source</span>
+            <span class="leaderboard-label" style="background-color: #f9f2f8;">Text-Only</span>
             <span class="leaderboard-label" style="background-color: #e0ebf3;">Human</span>
-            <span class="leaderboard-label" style="background-color: #def9cb;">Proprietary</span>
 
           </div>
           <table id="table1" class="js-sort-table">
@@ -963,7 +933,7 @@
       </p>
       <div class="content has-text-centered">
         <img src="images/prompt.png" width="75%">
-      <p>Overall results of different prompts on II-Bench.The label(Emotion, Domain, Rhetoric) means providing corresponding information for the images in the prompt.
+      <p>Overall results of different prompts on CII-Bench.The label(Emotion, Domain, Rhetoric) means providing corresponding information for the images in the prompt.
         The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u> .</p>
       </div>
 
@@ -976,8 +946,8 @@
       </p>
     </div>
     <div class="content has-text-centered">
-      <img src="images/shot.png" width="73%">
-      <p>Few-shot results of different models on the II-Bench. * means exceeds the context length.</p>
+      <img src="images/fewshot.png" width="73%">
+      <p>Few-shot results of different models on the CII-Bench.</p>
     </div>
 
   </div>
@@ -1085,10 +1055,10 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre><code>@article{liu2024ii,
-  title={II-Bench: An Image Implication Understanding Benchmark for Multimodal Large Language Models},
-  author={Liu, Ziqiang and Fang, Feiteng and Feng, Xi and Du, Xinrun and Zhang, Chenhao and Wang, Zekun and Bai, Yuelin and Zhao, Qixuan and Fan, Liyang and Gan, Chengguang and others},
-  journal={arXiv preprint arXiv:2406.05862},
+    <pre><code>@article{XXX,
+  title={CAN MLLMS UNDERSTAND THE DEEP IMPLICATION BEHIND CHINESE IMAGES?},
+  author={XXX},
+  journal={XXX},
   year={2024}
 }
 </code></pre>
