@@ -332,7 +332,8 @@
         </div> 
       </div>
     </div>
-</div>
+    
+  </div>
 </section>
 
 <!-- DATASET SECTION -->
@@ -860,88 +861,88 @@
     </div>
 
 <!-------------------------------------------------------------------- prompt skills -------------------------------------------------------------------->
-<div class="columns is-centered m-6">
-  <div class="column is-full has-text-centered content">
-    <h2 class="title is-3">Different Prompt Skills</h2>
-    <div class="content has-text-justified">
-      <p>
-      <b>Analysis of Chain-of-Thought (CoT)</b>. The results indicate that CoT does not significantly improve the accuracy of the models. 
-        In some cases, particularly with smaller open-source models, the accuracy even declined when CoT was used. 
-        For example, MiniCPM-v2.6 scores 45.0% without CoT, but this drops to 38.9% with CoT; similarly, LLaVA-1.6-72B scores decrease from 48.0% to 45.3%.
-        Upon analyzing the models’ responses, we find that those models showing a decrease in accuracy with CoT often suffer from overinterpretation, where questions that were initially answered correctly are misinterpreted after CoT is applied. 
-        Additionally, for questions that were originally answered incorrectly, CoT does not lead to significant improvements and sometimes even causes confusion, such as selecting multiple options. 
-        However, for most models, the probability of failing to extract an answer option from the response decreases after using CoT, which explains why some models show improved accuracy with CoT.
-      </p>
-      <p>
-      <b>Analysis of Different Types and Domains</b>. To evaluate the impact of different label information on model accuracy, we conduct an ablation study by providing relevant label information(Emotion, Domain, Rhetoric) in the prompts. 
-        The results show that emotion labels significantly improve model accuracy, followed by domain and rhetoric labels, both of which exhibit similar effectiveness.
-        This result aligns with human intuition. The answer options typically include negative, positive, and neutral choices. When the model receives emotional information, it can eliminate some irrelevant options, naturally leading to higher accuracy.
-        In contrast, domain and rhetoric information generally do not effectively help the model eliminate options, resulting in more limited improvements.
-        Additionally, from a model training perspective, models tend to have a more mature understanding of emotions, while specific nouns in rhetoric and domain labels are often custom-defined. 
-        During pre-training, the model may not have encountered a large number of descriptions for such specific nouns, making these labels less helpful in improving accuracy.
-      </p>
-      <div class="content has-text-centered">
-        <img src="images/prompt.png" width="75%">
-      <p>Overall results of different prompts on CII-Bench.The label(Emotion, Domain, Rhetoric) means providing corresponding information for the images in the prompt.
-        The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u> .</p>
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Different Prompt Skills</h2>
+        <div class="content has-text-justified">
+          <p>
+          <b>Analysis of Chain-of-Thought (CoT)</b>. The results indicate that CoT does not significantly improve the accuracy of the models. 
+            In some cases, particularly with smaller open-source models, the accuracy even declined when CoT was used. 
+            For example, MiniCPM-v2.6 scores 45.0% without CoT, but this drops to 38.9% with CoT; similarly, LLaVA-1.6-72B scores decrease from 48.0% to 45.3%.
+            Upon analyzing the models’ responses, we find that those models showing a decrease in accuracy with CoT often suffer from overinterpretation, where questions that were initially answered correctly are misinterpreted after CoT is applied. 
+            Additionally, for questions that were originally answered incorrectly, CoT does not lead to significant improvements and sometimes even causes confusion, such as selecting multiple options. 
+            However, for most models, the probability of failing to extract an answer option from the response decreases after using CoT, which explains why some models show improved accuracy with CoT.
+          </p>
+          <p>
+          <b>Analysis of Different Types and Domains</b>. To evaluate the impact of different label information on model accuracy, we conduct an ablation study by providing relevant label information(Emotion, Domain, Rhetoric) in the prompts. 
+            The results show that emotion labels significantly improve model accuracy, followed by domain and rhetoric labels, both of which exhibit similar effectiveness.
+            This result aligns with human intuition. The answer options typically include negative, positive, and neutral choices. When the model receives emotional information, it can eliminate some irrelevant options, naturally leading to higher accuracy.
+            In contrast, domain and rhetoric information generally do not effectively help the model eliminate options, resulting in more limited improvements.
+            Additionally, from a model training perspective, models tend to have a more mature understanding of emotions, while specific nouns in rhetoric and domain labels are often custom-defined. 
+            During pre-training, the model may not have encountered a large number of descriptions for such specific nouns, making these labels less helpful in improving accuracy.
+          </p>
+          <div class="content has-text-centered">
+            <img src="images/prompt.png" width="75%">
+          <p>Overall results of different prompts on CII-Bench.The label(Emotion, Domain, Rhetoric) means providing corresponding information for the images in the prompt.
+            The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u> .</p>
+          </div>
+
+          <p>
+          <b>Analysis of Few-shot Examples</b>. The results indicate that few-shot examples do not improve the models’ accuracy. 
+          Specifically, performance declines as the number of examples increases. This decline can be attributed to the models’ inferior capabilities in handling multiple images compared to single images, leading to a decrease in accuracy with a higher number of shots.
+          Furthermore, as the number of shots increases, the input length also extends, and the models’ ability to process long texts is inadequate, resulting in suboptimal performance with long contexts.
+        </div>
+        <div class="content has-text-centered">
+          <img src="images/fewshot.png" width="73%">
+          <p>Few-shot results of different models on the CII-Bench.</p>
+        </div>
+
       </div>
-
-      <p>
-      <b>Analysis of Few-shot Examples</b>. The results indicate that few-shot examples do not improve the models’ accuracy. 
-      Specifically, performance declines as the number of examples increases. This decline can be attributed to the models’ inferior capabilities in handling multiple images compared to single images, leading to a decrease in accuracy with a higher number of shots.
-      Furthermore, as the number of shots increases, the input length also extends, and the models’ ability to process long texts is inadequate, resulting in suboptimal performance with long contexts.
     </div>
-    <div class="content has-text-centered">
-      <img src="images/fewshot.png" width="73%">
-      <p>Few-shot results of different models on the CII-Bench.</p>
-    </div>
-
-  </div>
-</div>
 <!-------------------------------------------------------------------- CTC Evaluation SECTION -------------------------------------------------------------------->
-<div class="columns is-centered m-6">
-  <div class="column is-full has-text-centered content">
-    <h2 class="title is-3">Chinese Traditional Culture Evaluation</h2>
-    <div class="content has-text-justified">
-      <p>
-      <b>Why Choose to Evaluate Chinese Traditional Culture?</b> The Chinese traditional culture category is a distinctive feature of the CII-Bench dataset, where MLLMs consistently score the lowest. 
-        Therefore, we need a deeper evaluation of this field to analyze the extent to which MLLM understands Chinese traditional culture.
-        We choose to deeply analyze MLLM’s understanding of Chinese traditional culture by evaluating Chinese traditional paintings.
-      </p>
-      <p>
-        <b>Why Choose Chinese Traditional Paintings?</b> The imagery associated with Chinese traditional culture often embodies complex implications, encompassing customs, historical anecdotes, and legendary tales, making direct evaluation particularly challenging. Chinese traditional painting, intrinsically intertwined with Chinese traditional culture, offers a viable proxy for this assessment. 
-        The unique value of Chinese traditional painting lies in its embodiment of Chinese cultural connotations, aesthetic implications, and distinctive artistic expression.
-        The core philosophical concepts of Confucianism, Taoism, and Buddhism, along with their humanistic essence, have consistently permeated the entire trajectory of Chinese painting history.
-        Consequently, we choose to evaluate MLLMs’ comprehension of Chinese traditional culture through an in-depth analysis of their understanding of Chinese traditional paintings.
-        </p>
-      <p>
-      <b>Evaluation Metric</b>. Chinese traditional painting, a cornerstone of Chinese traditional culture, encompasses a rich tapestry of styles and techniques developed over millennia. 
-        These paintings are typically categorized based on their subject matter (e.g., landscape paintings, flower-and-bird paintings, figure paintings, and New Year paintings) or their stylistic and skill (e.g., court paintings, meticulous brush paintings, freehand brush paintings, and color-and-ink paintings). 
-        Each category embodies unique characteristics that reflect China’s artistic evolution and philosophical underpinnings.
-        To comprehensively assess MLLMs’ understanding of Chinese traditional paintings, we develop a multifaceted evaluation metric. This metric is designed to probe both the surface-level information readily apparent in the artwork and the deeper culture and history that informs its creation and interpretation. 
-        Our evaluation metric encompasses five key perspectives: <u>Surface-level Information</u>, <u>Aesthetic Characteristics</u>, <u>Brush and Ink Skills</u>, <u>Culture and History</u>, and <u>Deep Implications</u>.
-      </p>
-      <div class="content has-text-centered">
-        <img src="images/evaluation_metric_and_standard.png" width="73%">
-      <p>Evaluation metric and evaluation standard of Chinese traditional painting.</p>
-      </div>
-      <p>
-      <b>LLM-Based Chinese Traditional Painting Automatic Evaluation</b>. Our experiment utilize the CTC domain data from CII-Bench, comprising 130 Chinese traditional paintings.
-      We employ human-written descriptions and implication interpretations as ground truth. 
-      We choose GPT-4o to generate descriptions for these images, which are subsequently scored using GPT-4o and our evaluation standard.
-      To validate the model’s scoring efficacy, we enlist three PhD students well-versed in Chinese metaphorical imagery to independently score the 130 paintings.
-      The model-human scoring consistency reached 98%, affirming the method’s validity for assessing Chinese traditional painting comprehension. 
-      Analysis of these results, in conjunction with our evaluation standard, reveals insights across three dimensions: overall performance, difficulty levels, and emotions. 
-      The overall score of 2.71 indicates that while MLLM is able to observe the surface-level information of paintings, it has a large gap with humans in deeply interpreting the complex cultural elements contained in Chinese traditional art. 
-      In terms of difficulty evaluation, the model is consistent with human cognition, while in terms of emotion, the model has a higher negative score, indicating that the model can identify negative implications in paintings, such as using the past to satirize the present, and not appreciating talents.
-    </div>
-    <div class="content has-text-centered">
-      <img src="images/CTC_Evaluation.png" width="75%">
-      <p>Overall result of Chinese traditional painting.</p>
-    </div>
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Chinese Traditional Culture Evaluation</h2>
+        <div class="content has-text-justified">
+          <p>
+          <b>Why Choose to Evaluate Chinese Traditional Culture?</b> The Chinese traditional culture category is a distinctive feature of the CII-Bench dataset, where MLLMs consistently score the lowest. 
+            Therefore, we need a deeper evaluation of this field to analyze the extent to which MLLM understands Chinese traditional culture.
+            We choose to deeply analyze MLLM’s understanding of Chinese traditional culture by evaluating Chinese traditional paintings.
+          </p>
+          <p>
+            <b>Why Choose Chinese Traditional Paintings?</b> The imagery associated with Chinese traditional culture often embodies complex implications, encompassing customs, historical anecdotes, and legendary tales, making direct evaluation particularly challenging. Chinese traditional painting, intrinsically intertwined with Chinese traditional culture, offers a viable proxy for this assessment. 
+            The unique value of Chinese traditional painting lies in its embodiment of Chinese cultural connotations, aesthetic implications, and distinctive artistic expression.
+            The core philosophical concepts of Confucianism, Taoism, and Buddhism, along with their humanistic essence, have consistently permeated the entire trajectory of Chinese painting history.
+            Consequently, we choose to evaluate MLLMs’ comprehension of Chinese traditional culture through an in-depth analysis of their understanding of Chinese traditional paintings.
+            </p>
+          <p>
+          <b>Evaluation Metric</b>. Chinese traditional painting, a cornerstone of Chinese traditional culture, encompasses a rich tapestry of styles and techniques developed over millennia. 
+            These paintings are typically categorized based on their subject matter (e.g., landscape paintings, flower-and-bird paintings, figure paintings, and New Year paintings) or their stylistic and skill (e.g., court paintings, meticulous brush paintings, freehand brush paintings, and color-and-ink paintings). 
+            Each category embodies unique characteristics that reflect China’s artistic evolution and philosophical underpinnings.
+            To comprehensively assess MLLMs’ understanding of Chinese traditional paintings, we develop a multifaceted evaluation metric. This metric is designed to probe both the surface-level information readily apparent in the artwork and the deeper culture and history that informs its creation and interpretation. 
+            Our evaluation metric encompasses five key perspectives: <u>Surface-level Information</u>, <u>Aesthetic Characteristics</u>, <u>Brush and Ink Skills</u>, <u>Culture and History</u>, and <u>Deep Implications</u>.
+          </p>
+          <div class="content has-text-centered">
+            <img src="images/evaluation_metric_and_standard.png" width="73%">
+          <p>Evaluation metric and evaluation standard of Chinese traditional painting.</p>
+          </div>
+          <p>
+          <b>LLM-Based Chinese Traditional Painting Automatic Evaluation</b>. Our experiment utilize the CTC domain data from CII-Bench, comprising 130 Chinese traditional paintings.
+          We employ human-written descriptions and implication interpretations as ground truth. 
+          We choose GPT-4o to generate descriptions for these images, which are subsequently scored using GPT-4o and our evaluation standard.
+          To validate the model’s scoring efficacy, we enlist three PhD students well-versed in Chinese metaphorical imagery to independently score the 130 paintings.
+          The model-human scoring consistency reached 98%, affirming the method’s validity for assessing Chinese traditional painting comprehension. 
+          Analysis of these results, in conjunction with our evaluation standard, reveals insights across three dimensions: overall performance, difficulty levels, and emotions. 
+          The overall score of 2.71 indicates that while MLLM is able to observe the surface-level information of paintings, it has a large gap with humans in deeply interpreting the complex cultural elements contained in Chinese traditional art. 
+          In terms of difficulty evaluation, the model is consistent with human cognition, while in terms of emotion, the model has a higher negative score, indicating that the model can identify negative implications in paintings, such as using the past to satirize the present, and not appreciating talents.
+        </div>
+        <div class="content has-text-centered">
+          <img src="images/CTC_Evaluation.png" width="75%">
+          <p>Overall result of Chinese traditional painting.</p>
+        </div>
 
-  </div>
-</div>
+      </div>
+    </div>
 <!-------------------------------------------------------------------- Error Analysis SECTION -------------------------------------------------------------------->
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
@@ -1000,37 +1001,37 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
 
 <!-------------------------------------------------------------------- Interpretability Analysis SECTION -------------------------------------------------------------------->
-<div class="columns is-centered m-6">
-  <div class="column is-full has-text-centered content">
-    <h2 class="title is-3"> Interpretability Analysis of Chinese Image Implications</h2>
-    <div class="content has-text-justified">
-      <p>
-        The essence of Chinese image implications is deeply rooted in deep cultural heritage and complex contextual associations, which enables them to convey profound messages through nuanced expressions. 
-        For example, in traditional Chinese art forms such as landscape and New Year paintings, the imagery transcends mere depiction of nature or daily occurrences. 
-        Instead, it embodies emotions, philosophical insights, and societal norms through metaphorical and highly symbolic expressions.
-        These symbols, like the pine tree, plum blossom, and crane, are not superficial meaning but are steeped in centuries of cultural tradition, representing resilience, purity, and longevity.
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3"> Interpretability Analysis of Chinese Image Implications</h2>
+        <div class="content has-text-justified">
+          <p>
+            The essence of Chinese image implications is deeply rooted in deep cultural heritage and complex contextual associations, which enables them to convey profound messages through nuanced expressions. 
+            For example, in traditional Chinese art forms such as landscape and New Year paintings, the imagery transcends mere depiction of nature or daily occurrences. 
+            Instead, it embodies emotions, philosophical insights, and societal norms through metaphorical and highly symbolic expressions.
+            These symbols, like the pine tree, plum blossom, and crane, are not superficial meaning but are steeped in centuries of cultural tradition, representing resilience, purity, and longevity.
 
-        However, deciphering these complex messages can be challenging, particularly for those unfamiliar with the cultural and historical narratives tied to these symbols. 
-        This contrasts with English image implications, which often convey messages through more straightforward and explicit symbolism.
-        As a result, the interpretability of Chinese image implications depends to some extent on reconstructing and resonating with the cultural context, which is what makes them unique: their meaning is not only visual but also culturally resonant, bridging across time and space.
+            However, deciphering these complex messages can be challenging, particularly for those unfamiliar with the cultural and historical narratives tied to these symbols. 
+            This contrasts with English image implications, which often convey messages through more straightforward and explicit symbolism.
+            As a result, the interpretability of Chinese image implications depends to some extent on reconstructing and resonating with the cultural context, which is what makes them unique: their meaning is not only visual but also culturally resonant, bridging across time and space.
 
-        Moreover, the interpretability of Chinese image implications has new changed in the modern era.
-        Globalization and the surge of internet culture have intertwined foreign elements with traditional Chinese culture, birthing new symbols and implications. 
-        This intersection introduces additional layers of meaning, complicating the interpretation of traditional symbols.
-      </p>
+            Moreover, the interpretability of Chinese image implications has new changed in the modern era.
+            Globalization and the surge of internet culture have intertwined foreign elements with traditional Chinese culture, birthing new symbols and implications. 
+            This intersection introduces additional layers of meaning, complicating the interpretation of traditional symbols.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="images/Comparision of image.png" alt="Comparision of image" width="50%">
+          <p>Comparision of Chinese and English image implications. 
+            Chinese images often embody richer scenes and deeper implications with Chinese traditional culture compared with the straightforward and explicit symbolism in English images.</p>
+        </div>
+      </div>
     </div>
-    <div class="content has-text-centered">
-      <img src="images/Comparision of image.png" alt="Comparision of image" width="50%">
-      <p>Comparision of Chinese and English image implications. 
-        Chinese images often embody richer scenes and deeper implications with Chinese traditional culture compared with the straightforward and explicit symbolism in English images.</p>
-    </div>
+
   </div>
-</div>
-
+</section>
 <!-------------------------------------------------------------------- END SECTION -------------------------------------------------------------------->
 
 
